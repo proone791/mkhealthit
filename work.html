@@ -3,59 +3,84 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Work — M&amp;K Consultants</title>
-  <meta name="description" content="Selected healthcare IT engagements and custom software from M&amp;K Consultants, including NextGen conversions, Mirth interfaces, Racer X Cycling, and Garage Lien Desk.">
+  <title>Work — Epic, IDCO, Mirth — M&amp;K Consultants</title>
+  <meta name="description" content="Selected work: Epic and NextGen conversions, PDMP and state immunization Mirth channels, a pacemaker IDCO interface, Racer X Cycling, and Garage Lien Desk.">
   <link rel="canonical" href="https://mkhealthit.com/work.html">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;650&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-  <header class="wrap mast">
-    <a class="mark" href="/">
-      <strong>M&amp;K Consultants</strong>
-      <span>Healthcare IT</span>
-    </a>
-    <nav class="nav" aria-label="Primary">
-      <a href="/">Home</a>
-      <a href="/services.html">Services</a>
-      <a href="/work.html" aria-current="page">Work</a>
-      <a href="/about.html">About</a>
-      <a href="/contact.html">Contact</a>
-    </nav>
+  <header class="site-head">
+    <div class="wrap mast">
+      <a class="mark" href="/">
+        <strong>M&amp;K Consultants</strong>
+        <span>Healthcare IT</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+      <nav class="nav" id="nav" aria-label="Primary">
+        <a href="/">Home</a>
+        <a href="/services.html">Services</a>
+        <a href="/work.html" aria-current="page">Work</a>
+        <a href="/about.html">About</a>
+        <a href="/contact.html">Contact</a>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <section class="wrap hero">
+    <section class="wrap hero plain">
       <p class="kicker">Work</p>
-      <h1>Healthcare first. Software when the workflow has no product.</h1>
+      <h1>Epic conversions, state interfaces, and a pacemaker channel that actually files the interrogation.</h1>
       <p class="lede">Client names stay off this page unless we have written permission. Sizes, specialties, and the shape of the work are enough for a first conversation.</p>
+    </section>
+
+    <section class="band tint">
+      <div class="wrap">
+        <p class="kicker">Spotlight</p>
+        <article class="spot">
+          <p class="meta">Mirth · IDCO · Cardiology</p>
+          <div>
+            <h2>Pacemaker and ICD interrogations into NextGen</h2>
+            <p>Cardiology device clinics drown in programmer output. Biotronik, Medtronic, and St. Jude (and the rest of the IHE IDCO world) emit HL7 observation messages — implantable pacemakers, ICDs, CRT devices, loop recorders — that the EHR will not file on its own. Staff print PDFs. Discrete battery, lead, and therapy data never lands on the chart.</p>
+            <p>We built a Mirth Connect channel that watches for those <code>*.hl7</code> IDCO files, parses MSH/PID/OBR/OBX, matches the patient in NextGen, distinguishes remote monitor traffic from in-clinic interrogations, and writes discrete observations plus a clinical encounter the device clinic can work. A companion path produces the report PDF when the workflow still needs a document. Manufacturers are normalized (not left as a suffix on a name field). Lead positions — RA, RV, LV — are mapped so the template is not a blank grid.</p>
+            <p>The point is not “we know HL7.” It is that the next interrogation is in the chart before the patient is out of the parking lot.</p>
+          </div>
+        </article>
+      </div>
     </section>
 
     <section class="wrap band">
       <h2>Healthcare IT</h2>
       <div class="work-list">
         <article class="work">
-          <p class="meta">Conversions</p>
+          <p class="meta">Epic conversions</p>
           <div>
-            <h3>Legacy EHR into NextGen — and the other way</h3>
-            <p>Repeated conversions across SoapWare, Greenway, Amazing Charts, Allscripts, Siemens, and NextGen. The job is preserving chart history, documents, and schedules so the new system is usable on Monday, not merely “live.”</p>
+            <h3>Into Epic — and out of it</h3>
+            <p>The conversion everyone is buying right now: NextGen, Greenway, and other ambulatory EHRs into Epic so acquired clinics are not flying blind on day one. We also convert the other direction when Epic is the source and NextGen (or another EHR) is the landing pad. History, documents, schedules, charges — mapped, trial-loaded, and cut over.</p>
           </div>
         </article>
         <article class="work">
-          <p class="meta">Interfaces</p>
+          <p class="meta">PDMP</p>
           <div>
-            <h3>Custom Mirth channels</h3>
-            <p>JavaScript and SQL channels for labs, PDMP, billing, and vendor feeds that do not fit a stock interface. Built to be operated after we leave, not locked in a black box.</p>
+            <h3>Prescription drug monitoring that fires</h3>
+            <p>State PDMPs sit behind gateways that are picky about who the patient is and who the prescriber is. We build Mirth channels that query PDMP, keep an audit trail, and fail loudly when the gateway NACKs — so controlled-substance workflows are not a second login and a screenshot.</p>
+          </div>
+        </article>
+        <article class="work">
+          <p class="meta">Immunizations</p>
+          <div>
+            <h3>State IIS / VXU registries</h3>
+            <p>HL7 VXU to the state Immunization Information System, CDC 2.5.1 profile, CVX/MVX, VFC flags, SOAP or MLLP depending on the state, QBP when the clinic needs a bidirectional shot history. The EHR’s native VXU is the starting point. Mirth is what makes that state stop rejecting it.</p>
           </div>
         </article>
         <article class="work">
           <p class="meta">NextGen</p>
           <div>
-            <h3>Upgrades, templates, and go-lives</h3>
-            <p>KBM and EMR upgrades through v8, template and document work, SSRS and Crystal reporting, and go-live support for clinics from one provider to more than a thousand — including FQHCs and specialty practices.</p>
+            <h3>Pre-KBM through latest KBM 8</h3>
+            <p>KBM and EMR upgrades, template and document work, SSRS and Crystal, go-live support for clinics from one provider to more than a thousand — including FQHCs and specialty practices. The content libraries and upgrade path from pre-KBM through KBM 8, not just “we have seen v8.”</p>
           </div>
         </article>
         <article class="work">
@@ -76,7 +101,7 @@
             <p class="meta">iOS · Flutter</p>
             <div>
               <h3>Racer X Cycling</h3>
-              <p>Team cycling app on the App Store: rides, RSVPs, chat, routes with GPX/FIT, newsletters, and signed documents. Rebuilt in Flutter and shipped, including push notifications. Proof we can take a product from idea to store listing.</p>
+              <p>Team cycling app on the App Store: rides, RSVPs, chat, routes with GPX/FIT, newsletters, and signed documents. Rebuilt in Flutter and shipped, including push notifications.</p>
               <p><a href="https://apps.apple.com/us/app/racer-x-cycling/id6756443029">View on the App Store</a></p>
             </div>
           </article>
@@ -84,7 +109,7 @@
             <p class="meta">Local web app</p>
             <div>
               <h3>Garage Lien Desk</h3>
-              <p>A desk tool for garageperson’s lien cases. Each vehicle is a case; the app fills the official NY packet (MV-901A, MV-901B, MV-82TON, DTF-803) from a SQLite file on that computer. Nothing is uploaded. The point is replacing a paper/PDF grind with a repeatable workflow.</p>
+              <p>A desk tool for garageperson’s lien cases. Each vehicle is a case; the app fills the official NY packet (MV-901A, MV-901B, MV-82TON, DTF-803) from a SQLite file on that computer. Nothing is uploaded.</p>
             </div>
           </article>
         </div>
@@ -98,5 +123,6 @@
       <span>mkhealthit.com</span>
     </div>
   </footer>
+  <script src="/site.js"></script>
 </body>
 </html>

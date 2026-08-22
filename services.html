@@ -3,54 +3,74 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Services — M&amp;K Consultants</title>
-  <meta name="description" content="EHR conversions, Mirth Connect interfaces, NextGen implementation and support, reporting, and custom healthcare software from M&amp;K Consultants.">
+  <title>Services — Epic conversions, Mirth, NextGen — M&amp;K Consultants</title>
+  <meta name="description" content="Epic and NextGen EHR conversions, Mirth channels for PDMP and state immunization registries, IDCO cardiac device feeds, and NextGen from pre-KBM through KBM 8.">
   <link rel="canonical" href="https://mkhealthit.com/services.html">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;650&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-  <header class="wrap mast">
-    <a class="mark" href="/">
-      <strong>M&amp;K Consultants</strong>
-      <span>Healthcare IT</span>
-    </a>
-    <nav class="nav" aria-label="Primary">
-      <a href="/">Home</a>
-      <a href="/services.html" aria-current="page">Services</a>
-      <a href="/work.html">Work</a>
-      <a href="/about.html">About</a>
-      <a href="/contact.html">Contact</a>
-    </nav>
+  <header class="site-head">
+    <div class="wrap mast">
+      <a class="mark" href="/">
+        <strong>M&amp;K Consultants</strong>
+        <span>Healthcare IT</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+      <nav class="nav" id="nav" aria-label="Primary">
+        <a href="/">Home</a>
+        <a href="/services.html" aria-current="page">Services</a>
+        <a href="/work.html">Work</a>
+        <a href="/about.html">About</a>
+        <a href="/contact.html">Contact</a>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <section class="wrap hero">
+    <section class="wrap hero plain">
       <p class="kicker">Services</p>
-      <h1>Move the data. Connect the systems. Keep NextGen honest.</h1>
-      <p class="lede">Independent consulting for practices that are mid-conversion, mid-upgrade, or stuck with an interface that almost works. Remote-first, with on-site when go-live needs a body in the room.</p>
+      <h1>Epic is the conversion everyone is asking for. We still do the rest.</h1>
+      <p class="lede">Independent consulting for practices mid-conversion, mid-upgrade, or stuck with an interface the state keeps rejecting. Remote-first, on-site when go-live needs a body in the room.</p>
     </section>
 
     <section class="wrap band prose">
-      <h2>EHR conversions</h2>
-      <p>Complete conversions to and from NextGen, Greenway, Allscripts, Amazing Charts, SoapWare, Siemens Signature Gold, and related practice-management systems. The work is mapping what actually lives in production — charts, documents, appointments, charges, and the odd tables vendors forget — then extracting, transforming, and loading it so clinicians still recognize the patient on day one.</p>
-      <p>Typical engagements include source analysis, field mapping, trial loads, exception lists, and cutover support. Spreadsheet-only conversions are how history disappears. We do not do those.</p>
+      <h2>Epic and EHR conversions</h2>
+      <p>The current demand is <strong>Epic</strong>: health systems consolidating acquired clinics, ambulatory groups leaving NextGen or Greenway, and organizations that need history in Epic that clinicians will actually open. We extract, map, and load what Epic’s conversion specs will take — problems, medications, allergies, immunizations, documents, appointments, charges — and we are honest about what belongs in an archive instead of a bloated chart.</p>
+      <p>Complete conversions <strong>to and from</strong> Epic, NextGen, Greenway, Allscripts, Amazing Charts, SoapWare, Siemens Signature Gold, and related practice-management systems. Typical work: source analysis, field mapping, trial loads, exception lists, and cutover support. Spreadsheet-only conversions are how history disappears. We do not do those.</p>
     </section>
 
     <section class="band tint">
-      <div class="wrap prose">
+      <div class="wrap">
         <h2>Mirth Connect / NextGen Connect</h2>
-        <p>Custom channels in JavaScript and SQL. HL7 where it belongs, file and SFTP feeds where that is what the other side will accept, and FHIR when the EHR actually exposes it. Labs, PDMP, billing, pharmacy, appointment reminders, grant extracts, and the vendor that will only take a CSV at 2 a.m.</p>
-        <p>We write, troubleshoot, and hand off channels you can operate — or we stay on to keep them healthy.</p>
+        <p class="lede" style="margin-bottom: 1.2rem;">Custom channels in JavaScript and SQL. HL7 where it belongs, file and SFTP where that is what the other side will take, FHIR when the EHR actually exposes it.</p>
+        <div class="grid-2">
+          <article class="tile">
+            <h3>PDMP — prescription drug monitoring</h3>
+            <p>Every state PDMP (often via Bamboo Health / PMP InterConnect or a state gateway) expects a clean query before a controlled-substance script goes out. Out-of-the-box EHR PDMP fails on identifiers, gateway credentials, patient matching, and the audit trail the board will ask for later.</p>
+            <p>We put Mirth in the middle: normalize the query, map MRN/NPI/DEA the way that state wants, log the response, and surface NACKs instead of a silent miss. Clinics keep prescribing without a second browser and a hope.</p>
+          </article>
+          <article class="tile">
+            <h3>State immunizations (IIS)</h3>
+            <p>Each state’s Immunization Information System wants HL7 VXU — usually CDC 2.5.1 — with CVX/MVX codes, VFC eligibility, and either SOAP/WSDL or MLLP. Bidirectional shops also send QBP queries so the chart can show what the school and the health department already know.</p>
+            <p>The EHR’s “immunization interface” is almost never the message the IIS will accept. Mirth uplifts, validates, retries, and reconciles ACKs so promoting-interoperability and VFC reporting do not fail in a queue nobody watches.</p>
+          </article>
+        </div>
+        <article class="tile" style="margin-top: 1rem;">
+          <h3>Cardiac devices — IDCO pacemaker / ICD</h3>
+          <p>Programmers and remote monitors (Biotronik, Medtronic, St. Jude and others) emit IHE IDCO HL7 — implantable pacemaker, ICD, CRT, and loop-recorder interrogations. We built a production Mirth path that files those observations into the EHR, matches the patient, splits remote vs in-clinic traffic, and opens a usable encounter instead of dropping a PDF on a share. Details on <a href="/work.html">Work</a>.</p>
+        </article>
+        <p class="lede" style="margin: 1.2rem 0 0;">Also: labs, billing, pharmacy, appointment reminders, grant extracts, and the vendor that will only take a CSV at 2 a.m. We write, troubleshoot, and hand off channels you can operate — or we stay on to keep them healthy.</p>
       </div>
     </section>
 
     <section class="wrap band prose">
-      <h2>NextGen EHR and EPM</h2>
-      <p>NextGen through v8 and all prior versions, including KBM and EMR upgrades, go-lives, med/CPT/ICD updates, templates, documents, File Maintenance, Blobulizer, Rosetta, BBP, Dragon, DAX, and Nuance. Reporting in SSRS and Crystal. SQL stored procedures, jobs, and SSIS packages.</p>
+      <h2>NextGen EHR and EPM — pre-KBM through KBM 8</h2>
+      <p>NextGen from <strong>pre-KBM through the latest KBM 8</strong>, including KBM and EMR upgrades, go-lives, med/CPT/ICD updates, templates, documents, File Maintenance, Blobulizer, Rosetta, BBP, Dragon, DAX, and Nuance. Reporting in SSRS and Crystal. SQL stored procedures, jobs, and SSIS packages.</p>
+      <p>That “pre-KBM through KBM 8” line matters: template content, assessment libraries, and upgrade sequencing are not the same as “we have seen version 8.” We have lived the full stack clinics actually run.</p>
       <p>Clinics from a single provider to more than a thousand. FQHC workflows. Specialties including family practice, internal medicine, cardiology, behavioral health, ENT, and pediatrics. Surrounding stack: Soarian Clinicals, i2iTracks, Phreesia, Birdeye, fax, Citrix, and terminal services.</p>
     </section>
 
@@ -63,8 +83,8 @@
 
     <section class="wrap band prose">
       <h2>Custom software</h2>
-      <p>When there is no product for the workflow — a local operations desk, a mobile app, a one-off extract — we build it. See <a href="/work.html">selected work</a> for Racer X Cycling and Garage Lien Desk. Healthcare remains the core practice; custom software is how we finish jobs the EHR will not.</p>
-      <p><a class="btn primary" href="/contact.html">Ask about a conversion or interface</a></p>
+      <p>When there is no product for the workflow — a local operations desk, a mobile app, a one-off extract — we build it. See <a href="/work.html">selected work</a>. Healthcare remains the core practice; custom software is how we finish jobs the EHR will not.</p>
+      <p><a class="btn primary" href="/contact.html">Ask about Epic, PDMP, or a conversion</a></p>
     </section>
   </main>
 
@@ -74,5 +94,6 @@
       <span>mkhealthit.com</span>
     </div>
   </footer>
+  <script src="/site.js"></script>
 </body>
 </html>
