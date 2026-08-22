@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Work — Epic, IDCO, Mirth — M&amp;K Consultants</title>
-  <meta name="description" content="Selected work: Epic and NextGen conversions, PDMP and state immunization Mirth channels, a pacemaker IDCO interface, Racer X Cycling, and Garage Lien Desk.">
+  <meta name="description" content="Selected work: Epic conversions, NCQA SSRS reporting, conversion archives, NextGen wound-care templates, Mirth IDCO, Racer X, and Garage Lien Desk.">
   <link rel="canonical" href="https://mkhealthit.com/work.html">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -73,6 +73,33 @@
           <div>
             <h3>State IIS / VXU registries</h3>
             <p>HL7 VXU to the state Immunization Information System, CDC 2.5.1 profile, CVX/MVX, VFC flags, SOAP or MLLP depending on the state, QBP when the clinic needs a bidirectional shot history. The EHR’s native VXU is the starting point. Mirth is what makes that state stop rejecting it.</p>
+          </div>
+        </article>
+        <article class="work">
+          <p class="meta">Quality reporting</p>
+          <div>
+            <h3>NCQA diabetes measures in SSRS</h3>
+            <p>A provider scorecard off NextGen clinical data — A1c bands, blood pressure, eye and foot exams, nephropathy, LDL, smoking cessation — each column with the NCQA target, cells lighting up when a panel is off. Medical directors see who is missing the mark without a week in Excel. Organization and provider names removed from the sample below.</p>
+            <div class="shots">
+              <figure>
+                <a href="/images/work/ncqa-diabetes.jpg"><img src="/images/work/ncqa-diabetes.jpg" alt="Redacted NCQA diabetes measures SSRS report with targets and exception highlighting" width="1023" height="1183"></a>
+                <figcaption>Sample output. Practice name and providers redacted.</figcaption>
+              </figure>
+            </div>
+          </div>
+        </article>
+        <article class="work">
+          <p class="meta">SSRS archive</p>
+          <div>
+            <h3>Keep the old chart after the EHR goes dark</h3>
+            <p>Conversions turn off the source system. HIM still gets a request for the record from 2011. We built an SSRS archive against the converted store: search the source patient, then problems, medications, allergies, appointments, and documents, and queue the old chart to PDF. The legacy EHR can actually be retired.</p>
+          </div>
+        </article>
+        <article class="work">
+          <p class="meta">NextGen templates</p>
+          <div>
+            <h3>Custom wound-care template suite</h3>
+            <p>Not a stock KBM screen with extra checkboxes. A NextGen wound-care workflow: a grid of open wounds, select one, document length × width × depth and area, tunneling and undermining, tissue, drainage, treatments, Wagner grade, procedures, then close the wound when it is done. A conc-disp stored procedure writes the note so nursing is not retyping the grid into a text box. We are not posting template screenshots — those are live clinical screens.</p>
           </div>
         </article>
         <article class="work">
