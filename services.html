@@ -69,15 +69,15 @@
 
     <section class="wrap band prose">
       <h2>NextGen EHR and EPM — pre-KBM through KBM 8</h2>
-      <p>Joshua has been in NextGen since the <strong>1990s</strong> — <strong>pre-KBM through the latest KBM 8</strong>. KBM and EMR upgrades, go-lives, med/CPT/ICD updates, templates (including a custom wound-care suite: multi-wound grid, measurements, treatments, Wagner grade, close-wound, and a note that writes from the grid), documents, File Maintenance, Blobulizer, Rosetta, BBP, Dragon, DAX, and Nuance. Reporting in SSRS and Crystal. Stored procedures, jobs, and SSIS packages written against the real schema, not a diagram in a vendor deck.</p>
+      <p>Joshua has been in NextGen since the <strong>1990s</strong> — <strong>pre-KBM through the latest KBM 8</strong>. KBM and EMR upgrades, go-lives, med/CPT/ICD updates, templates (including a custom wound-care suite: multi-wound grid, measurements, treatments, Wagner grade, close-wound, and a note that writes from the grid), documents, File Maintenance, Blobulizer, Rosetta, BBP, Dragon, DAX, and Nuance. Reporting in SSRS and Crystal. Custom stored procedures, jobs, and SSIS packages written against the real schema, not a diagram in a vendor deck.</p>
       <p>The SQL tables are working memory: person and encounter, orders, documents, insurance, the KBM assessment libraries, the odd join that is the only way a conversion finds historical vitals or signed notes. That is why Epic (and other) conversions off NextGen do not start with a guess about where the data lives.</p>
       <p>Hospitals, IDNs, FQHCs, and specialty groups — cardiology, orthopedics, ENT, dermatology, pediatrics, family medicine, behavioral health — from a single provider to more than a thousand. Surrounding stack: Soarian Clinicals, i2iTracks, Phreesia, Birdeye, fax, Citrix, and terminal services.</p>
     </section>
 
     <section class="band tint">
       <div class="wrap prose">
-        <h2>Reporting, SQL, and ServiceNow</h2>
-        <p>Operational and clinical reports written straight to the NextGen SQL database — including NCQA / HEDIS-style diabetes scorecards with targets and exception highlighting, and an SSRS archive so a converted clinic can still find and print the old chart after the source EHR is off. ServiceNow support at clinics that already run it. NextGen certified (2025) and ServiceNow certified (2025).</p>
+        <h2>Custom stored procedures, reporting, and ServiceNow</h2>
+        <p>Custom stored procedures are an in-demand service: conc-disp note writers, dashboard and template data, conversion loads, overnight jobs, and the SQL the EHR will not ship. Written against the real NextGen schema — not a vendor diagram. Operational and clinical reports in SSRS and Crystal, including NCQA / HEDIS-style diabetes scorecards with targets and exception highlighting, and an SSRS archive so a converted clinic can still find and print the old chart after the source EHR is off. ServiceNow support at clinics that already run it. NextGen certified (2025) and ServiceNow certified (2025).</p>
       </div>
     </section>
 
