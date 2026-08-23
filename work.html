@@ -45,6 +45,7 @@
             <h2>Pacemaker and ICD interrogations into NextGen</h2>
             <p>Cardiology device clinics drown in programmer output. Biotronik, Medtronic, and St. Jude (and the rest of the IHE IDCO world) emit HL7 observation messages — implantable pacemakers, ICDs, CRT devices, loop recorders — that the EHR will not file on its own. Staff print PDFs. Discrete battery, lead, and therapy data never lands on the chart.</p>
             <p>We built a Mirth Connect channel that watches for those <code>*.hl7</code> IDCO files, parses MSH/PID/OBR/OBX, matches the patient in NextGen, distinguishes remote monitor traffic from in-clinic interrogations, and writes discrete observations plus a clinical encounter the device clinic can work. A companion path produces the report PDF when the workflow still needs a document. Manufacturers are normalized (not left as a suffix on a name field). Lead positions — RA, RV, LV — are mapped so the template is not a blank grid.</p>
+            <p>If an abnormal or out-of-range interrogation comes in — a reading the device clinic has to act on — it shows on the pacemaker dashboard, and a NextGen task goes to a nursing task group so someone follows up with the patient. Routine interrogations file quietly. The ones that need a callback do not sit in a share folder.</p>
             <p>The point is not “we know HL7.” It is that the next interrogation is in the chart before the patient is out of the parking lot.</p>
           </div>
         </article>
