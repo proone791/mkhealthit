@@ -324,6 +324,24 @@ h3 {
   color: var(--brass);
 }
 
+blockquote.quote {
+  margin: 0;
+}
+
+blockquote.quote p {
+  color: var(--ink);
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 1.15rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+blockquote.quote footer {
+  margin-top: 0.75rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
 .spot {
   display: grid;
   grid-template-columns: 11rem 1fr;
