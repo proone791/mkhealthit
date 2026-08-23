@@ -426,6 +426,37 @@ h3 {
   display: block;
 }
 
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 1.2rem 0 0;
+}
+
+.gallery figure {
+  margin: 0;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
+.gallery .crop img {
+  height: 18rem;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.gallery figcaption {
+  margin: 0.4rem 0 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
 .prose p {
   margin: 0 0 1rem;
 }
@@ -476,6 +507,7 @@ dl.facts dd {
   .spot,
   .work,
   .shots-split,
+  .gallery,
   dl.facts {
     grid-template-columns: 1fr;
   }
