@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Services — Epic conversions, Mirth, NextGen — M&amp;K Consultants</title>
+  <title>Services: Epic conversions, Mirth, NextGen · M&amp;K Consultants</title>
   <meta name="description" content="Epic and NextGen EHR conversions, Mirth channels for PDMP and state immunization registries, IDCO cardiac device feeds, and NextGen from pre-KBM through KBM 8.">
   <link rel="canonical" href="https://mkhealthit.com/services.html">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -34,13 +34,13 @@
     <section class="wrap hero plain">
       <p class="kicker">Services</p>
       <h1>Epic is the conversion everyone is asking for. We still do the rest.</h1>
-      <p class="lede">Independent consulting for the whole conversion — kickoff through cutover and the week after — plus upgrades and the interface the state keeps rejecting. Remote-first, on-site when go-live needs a body in the room.</p>
+      <p class="lede">Independent consulting for the whole conversion, kickoff through cutover and the week after, plus upgrades and the interface the state keeps rejecting. Remote-first, on-site when go-live needs a body in the room.</p>
     </section>
 
     <section class="wrap band prose">
       <h2>Epic and EHR conversions</h2>
-      <p>The current demand is <strong>Epic</strong>: health systems consolidating acquired clinics, ambulatory groups leaving NextGen or Greenway, and organizations that need history in Epic that clinicians will actually open. We extract, map, and load what Epic’s conversion specs will take — problems, medications, allergies, immunizations, documents, appointments, charges, future orders.</p>
-      <p>Hundreds of successful conversions <strong>to and from</strong> Epic, NextGen, Greenway, Allscripts, Veradigm, Athenahealth, Meditech, Sunrise Clinical, Amazing Charts, SoapWare, Siemens Signature Gold, related practice-management systems, and any software that resides in a database. Typical work: source analysis, field mapping, trial loads, exception lists, cutover support, and archiving. We built an SSRS archive so HIM can still search the source patient, problems, meds, allergies, appointments, and documents — and print the old chart to PDF — after the legacy EHR is off. Spreadsheet-only conversions are how history disappears. We do not do those.</p>
+      <p>The current demand is <strong>Epic</strong>: health systems consolidating acquired clinics, ambulatory groups leaving NextGen or Greenway, and organizations that need history in Epic that clinicians will actually open. We extract, map, and load what Epic’s conversion specs will take: problems, medications, allergies, immunizations, documents, appointments, charges, future orders.</p>
+      <p>Hundreds of successful conversions <strong>to and from</strong> Epic, NextGen, Greenway, Allscripts, Veradigm, Athenahealth, Meditech, Sunrise Clinical, Amazing Charts, SoapWare, Siemens Signature Gold, related practice-management systems, and any software that resides in a database. Typical work: source analysis, field mapping, trial loads, exception lists, cutover support, and archiving. We built an SSRS archive so HIM can still search the source patient, problems, meds, allergies, appointments, and documents, and print the old chart to PDF after the legacy EHR is off. Spreadsheet-only conversions are how history disappears. We do not do those.</p>
     </section>
 
     <section class="band tint">
@@ -49,41 +49,41 @@
         <p class="lede" style="margin-bottom: 1.2rem;">Custom channels in JavaScript and SQL. HL7 where it belongs, file and SFTP where that is what the other side will take, FHIR when the EHR actually exposes it.</p>
         <div class="grid-2">
           <article class="tile">
-            <h3>PDMP — prescription drug monitoring</h3>
+            <h3>PDMP: prescription drug monitoring</h3>
             <p>Every state PDMP (often via Bamboo Health / PMP InterConnect or a state gateway) expects a clean query before a controlled-substance script goes out. Out-of-the-box EHR PDMP fails on identifiers, gateway credentials, patient matching, and the audit trail the board will ask for later.</p>
             <p>We put Mirth in the middle: normalize the query, map MRN/NPI/DEA the way that state wants, log the response, and surface NACKs instead of a silent miss. Clinics keep prescribing without a second browser and a hope.</p>
           </article>
           <article class="tile">
             <h3>State immunizations (IIS)</h3>
-            <p>Each state’s Immunization Information System wants HL7 VXU — usually CDC 2.5.1 — with CVX/MVX codes, VFC eligibility, and either SOAP/WSDL or MLLP. Bidirectional shops also send QBP queries so the chart can show what the school and the health department already know.</p>
+            <p>Each state’s Immunization Information System wants HL7 VXU, usually CDC 2.5.1, with CVX/MVX codes, VFC eligibility, and either SOAP/WSDL or MLLP. Bidirectional shops also send QBP queries so the chart can show what the school and the health department already know.</p>
             <p>The EHR’s “immunization interface” is almost never the message the IIS will accept. Mirth uplifts, validates, retries, and reconciles ACKs so promoting-interoperability and VFC reporting do not fail in a queue nobody watches.</p>
           </article>
         </div>
         <article class="tile" style="margin-top: 1rem;">
-          <h3>Cardiac devices — IDCO pacemaker / ICD</h3>
-          <p>Programmers and remote monitors (Biotronik, Medtronic, St. Jude and others) emit IHE IDCO HL7 — implantable pacemaker, ICD, CRT, and loop-recorder interrogations. We built a production Mirth path that files those observations into the EHR, matches the patient, splits remote vs in-clinic traffic, and opens a usable encounter instead of dropping a PDF on a share. Abnormal or out-of-range interrogations show on the pacemaker dashboard and create a NextGen task to a nursing task group so someone follows up with the patient. Details on <a href="/work.html">Work</a>.</p>
+          <h3>Cardiac devices: IDCO pacemaker / ICD</h3>
+          <p>Programmers and remote monitors (Biotronik, Medtronic, St. Jude and others) emit IHE IDCO HL7: implantable pacemaker, ICD, CRT, and loop-recorder interrogations. We built a production Mirth path that files those observations into the EHR, matches the patient, splits remote vs in-clinic traffic, and opens a usable encounter instead of dropping a PDF on a share. Abnormal or out-of-range interrogations show on the pacemaker dashboard and create a NextGen task to a nursing task group so someone follows up with the patient. Details on <a href="/work.html">Work</a>.</p>
         </article>
-        <p class="lede" style="margin: 1.2rem 0 0;">Also: labs, billing, pharmacy, appointment reminders, grant extracts, and the vendor that will only take a CSV at 2 a.m. We write, troubleshoot, and hand off channels you can operate — or we stay on to keep them healthy.</p>
+        <p class="lede" style="margin: 1.2rem 0 0;">Also: labs, billing, pharmacy, appointment reminders, grant extracts, and the vendor that will only take a CSV at 2 a.m. We write, troubleshoot, and hand off channels you can operate, or we stay on to keep them healthy.</p>
       </div>
     </section>
 
     <section class="wrap band prose">
-      <h2>NextGen EHR and EPM — pre-KBM through KBM 8</h2>
-      <p>Joshua has been in NextGen since the <strong>1990s</strong> — <strong>pre-KBM through the latest KBM 8</strong>. KBM and EMR upgrades, go-lives, med/CPT/ICD updates, templates (including a custom wound-care suite: multi-wound grid, measurements, treatments, Wagner grade, close-wound, and a note that writes from the grid), documents, File Maintenance, Blobulizer, Rosetta, BBP, Dragon, DAX, and Nuance. Reporting in SSRS and Crystal. Custom stored procedures, jobs, and SSIS packages written against the real schema, not a diagram in a vendor deck.</p>
+      <h2>NextGen EHR and EPM, pre-KBM through KBM 8</h2>
+      <p>Joshua has been in NextGen since the <strong>1990s</strong>, <strong>pre-KBM through the latest KBM 8</strong>. KBM and EMR upgrades, go-lives, med/CPT/ICD updates, templates (including a custom wound-care suite: multi-wound grid, measurements, treatments, Wagner grade, close-wound, and a note that writes from the grid), documents, File Maintenance, Blobulizer, Rosetta, BBP, Dragon, DAX, and Nuance. Reporting in SSRS and Crystal. Custom stored procedures, jobs, and SSIS packages written against the real schema, not a diagram in a vendor deck.</p>
       <p>The SQL tables are working memory: person and encounter, orders, documents, insurance, the KBM assessment libraries, the odd join that is the only way a conversion finds historical vitals or signed notes. That is why Epic (and other) conversions off NextGen do not start with a guess about where the data lives.</p>
-      <p>Hospitals, IDNs, FQHCs, and specialty groups — cardiology, orthopedics, ENT, dermatology, pediatrics, family medicine, behavioral health — from a single provider to more than a thousand. Surrounding stack: Soarian Clinicals, i2iTracks, Phreesia, Birdeye, fax, Citrix, and terminal services.</p>
+      <p>Hospitals, IDNs, FQHCs, and specialty groups (cardiology, orthopedics, ENT, dermatology, pediatrics, family medicine, behavioral health) from a single provider to more than a thousand. No job is too small. Surrounding stack: Soarian Clinicals, i2iTracks, Phreesia, Birdeye, fax, Citrix, and terminal services.</p>
     </section>
 
     <section class="band tint">
       <div class="wrap prose">
         <h2>Custom stored procedures, quality reports, and ServiceNow</h2>
-        <p>Custom stored procedures are an in-demand service: conc-disp note writers, dashboard and template data, conversion loads, overnight jobs, and the SQL the EHR will not ship. Written against the real NextGen schema — not a vendor diagram. We build Centers for Medicare &amp; Medicaid Services (CMS), Healthcare Effectiveness Data and Information Set (HEDIS), and National Committee for Quality Assurance (NCQA) reports — diabetes and other quality scorecards with targets and exception highlighting — in SQL Server Reporting Services (SSRS) and Crystal. Also an SSRS archive so a converted clinic can still find and print the old chart after the source EHR is off. ServiceNow support at clinics that already run it. NextGen certified (2025).</p>
+        <p>Custom stored procedures are an in-demand service: conc-disp note writers, dashboard and template data, conversion loads, overnight jobs, and the SQL the EHR will not ship. Written against the real NextGen schema, not a vendor diagram. We build Centers for Medicare &amp; Medicaid Services (CMS), Healthcare Effectiveness Data and Information Set (HEDIS), and National Committee for Quality Assurance (NCQA) reports: diabetes and other quality scorecards with targets and exception highlighting, in SQL Server Reporting Services (SSRS) and Crystal. Also an SSRS archive so a converted clinic can still find and print the old chart after the source EHR is off. ServiceNow support at clinics that already run it. NextGen certified (2025).</p>
       </div>
     </section>
 
     <section class="wrap band prose">
       <h2>Custom software</h2>
-      <p>When there is no product for the workflow — a local operations desk, a mobile app, a one-off extract — we build it. Example: NextGen Rosetta could not always match the patient, so a Python script reads the inbound message, searches for the identifiers that actually exist, and writes the data into the chart, bypassing the holding tank and Clinical Message Manager. See <a href="/work.html">selected work</a>. Healthcare remains the core practice; custom software is how we finish jobs the EHR will not.</p>
+      <p>When there is no product for the workflow (a local operations desk, a mobile app, a one-off extract), we build it. Example: NextGen Rosetta could not always match the patient, so a Python script reads the inbound message, searches for the identifiers that actually exist, and writes the data into the chart, bypassing the holding tank and Clinical Message Manager. See <a href="/work.html">selected work</a>. Healthcare remains the core practice; custom software is how we finish jobs the EHR will not.</p>
       <p><a class="btn primary" href="/contact.html">Ask about Epic, PDMP, or a conversion</a></p>
     </section>
   </main>
